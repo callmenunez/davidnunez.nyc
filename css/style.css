@@ -29,6 +29,9 @@ h4 {
 	font-size: 24px;
 	margin-bottom: 20px;
 }
+footer h4 {
+	font-size: 22px;
+}
 
 h5 {
 	color: #59595a;
@@ -58,6 +61,7 @@ a {
 a:hover {
 	color: #eb4c41;
 	text-decoration: none;
+	font-weight: 700;
 }
 .navigation a {
 	line-height: 90px;
@@ -106,12 +110,18 @@ hr {
 }
 
 #hero {
+	background: url("../img/web_background.png");
 	background-color: #0072cf;
+	background-repeat: no-repeat;
+	background-size: 100%;
 	padding-top: 100px;
 	padding-bottom: 120px;
 }
 
 #welcome {
+	background: url("../img/web_outlines.png");
+	background-repeat: no-repeat;
+	background-position: right center;
 	background-color: #ebebeb;
 	padding: 80px 0 90px 0;
 }
@@ -139,6 +149,7 @@ hr {
 	box-shadow: 0px 0px 20px #999;
 	height: 350px;
 	margin-top: 30px;
+	margin-bottom: 120px;
 }
 .call-box h4 {
 	text-align: center;
@@ -173,4 +184,17 @@ hr {
 	padding-top: 50px;
 	margin: 0 auto;
 	display: block;
+}
+.next {
+	float: right;
+}
+.social {
+	display: inline-block;
+	margin-right: 10px;
+}
+.social a:hover {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
 }
