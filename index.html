@@ -70,16 +70,24 @@
 					<div class="row">
 
 						<div class="col-md-4">
-							<div class="call-box knack shake">
+							<div class="call-box">
+								<div class="front">
 								<img src="img/type.png" class="icons"/>
 								<h4>Typography</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								<a href="#" class="button">LEARN MORE</a>
+								</div>
+								<div class="back">
+								<img src="img/type.png" class="icons"/>
+								<h4>Typography</h4>
+								<p>blah blah blah.</p>
+								<a href="#" class="button">LEARN MORE</a>
+								</div>
 							</div>
 						</div>
 
 						<div class="col-md-4">
-							<div class="call-box knack shake">
+							<div class="call-box">
 								<img src="img/colors.png" class="icons"/>
 								<h4>Colors</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -88,7 +96,7 @@
 						</div>
 
 						<div class="col-md-4">
-							<div class="call-box knack shake">
+							<div class="call-box">
 								<img src="img/logos.png" class="icons"/>
 								<h4>Logos</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -146,8 +154,11 @@
 					</div>
 				</div>
 			</footer>
-
-
+			<script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script>
+$(".call-box").flip();
+</script>
 	</body>
 
 </html>
