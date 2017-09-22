@@ -1,0 +1,166 @@
+body {
+  clear: both;
+  font-family: "Libre Baskerville", Times, serif;
+  font-size: 16px;
+  color: #6e6e6e;
+  display; flex;
+}
+h1 {
+  font-size: 3em;
+  color: #FFA500;
+}
+h2 {
+  font-family: "Open Sans", Helvetica, Sans-serif;
+  font-size: 1.75em;
+  color: #FFA500;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.5em;
+}
+p {
+  line-height: 2em;
+  margin: 12px 0;
+}
+p:last-of-type {
+  margin-bottom: 48px;
+}
+a {
+  color: #FFA500;
+}
+a:hover {
+  color: #FFA500;
+}
+.bold {
+  font-weight: 800;
+}
+.container {
+  margin: 0;
+  width: 100%;
+}
+.left-side {
+  background-image: url("../img/david-headshot-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  width: 50vw;
+  height: 100vh;
+  background-color: #d4e1f1;
+}
+.right-side {
+  float: right;
+  width: 50vw;
+  background-color: #fff;
+  height: 100vh;
+  overflow: scroll;
+}
+.bio {
+  padding: 100px;
+  display: flex;
+  /*justify-content: center;*/
+  flex-direction: column;
+  height: 100%;
+  /*height: calc(100vh - 120px);*/
+}
+.social-media {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+.fa-ul {
+  margin-left: 0;
+}
+.fa {
+  margin-left: 24px;
+  color: #FFA500;
+}
+@media only screen and (min-width : 320px) {
+  body {
+    font-size: 12px;
+  }
+  .left-side {
+    height: 50vh;
+  }
+  .bio {
+    padding: 40px;
+  }   
+  .social-media {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width : 480px) {
+  .bio {
+    padding: 40px;
+  }
+}
+/*@media screen and (max-width: 769px) and (min-width: 480px) {
+  body { 
+    padding: 0;
+  }
+  .left-side {
+    float: none;
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+  }
+  .right-side {
+    float: none;
+    width: 100vw;
+    overflow: visible;
+    height: 100%;
+  }
+}*/
+@media (max-width: 769px) and (orientation: portrait) {
+  body {
+    padding: 0;
+  }
+  .left-side {
+    float: none;
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+  }
+  .right-side {
+    float: none;
+    width: 100vw;
+    overflow: visible;
+    height: 100%;
+  }
+}
+@media (min-width: 770px) and (orientation: portrait) {
+  body {
+    font-size: 16px;
+  }
+  .left-side {
+    float: none;
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+  }
+  .right-side {
+    float: none;
+    width: 100vw;
+    overflow: visible;
+    height: 100%;
+  }
+}
+@media (min-width: 770px) and (orientation: landscape) {
+  body {
+    font-size: 16px;
+  }
+  .left-side {
+    background-image: url("../img/david-headshot-2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    width: 50vw;
+    height: 100vh;
+    background-color: #d4e1f1;
+  }
+  .right-side {
+    float: right;
+    width: 50vw;
+    background-color: #fff;
+    height: 100vh;
+    overflow: scroll;
+  }
+}
