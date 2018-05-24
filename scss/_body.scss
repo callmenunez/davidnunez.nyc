@@ -2,38 +2,38 @@ html {
   font-size: 16px;
   height: 100%;
   body {
-    background-color: #71c2d3;
-    border: 20px solid #2b515a;
+    background-color: #e6eff0;
+    border: 2rem solid #ffffff;
     height: 100%;
-    font-family: "Playfair Display", serif;
-    h1 {
-      font-size: 10rem;
-      color: #2b515a;
-      font-weight: 900;
-      line-height: 9rem;
-    }
-    @media only screen and (max-width:1150px) {
+    font-family: "Open Sans", serif;
+    display: flex;
+    .container-fluid {
+      width: 50vw;
+      padding: 0 2rem;
       h1 {
-        font-size: 8rem;
-        line-height: 8rem;
+        font-family: "Playfair Display", serif;
+        font-size: 5vw;
+        color: #ffffff;
+        font-weight: 900;
+      }
+      p {
+        color: #1c3e41;
+        margin-bottom: 0;
+      }
+      &:first-of-type {
+        background-color: #619296;
       }
     }
-    @media only screen and (max-width:900px) {
-      h1 {
-        font-size: 6rem;
-        line-height: 6rem;
-      }
-    }
-    @media only screen and (max-width:700px) {
-      h1 {
-        font-size: 4rem;
-        line-height: 4rem;
-      }
-    }
-    @media only screen and (max-width:500px) {
-      h1 {
-        font-size: 2rem;
-        line-height: 2rem;
+    @media only screen and (max-width: 700px) {
+      display: inline-flex;
+      flex-direction: column;
+      border: 1rem solid #ffffff;
+      .container-fluid {
+        width: 100%;
+        height: 100%;
+        h1 {
+          font-size: 12vw;
+        }
       }
     }
   }
