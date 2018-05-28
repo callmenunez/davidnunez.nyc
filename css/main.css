@@ -8,13 +8,17 @@ html {
     font-family: "Playfair Display", serif;
     font-weight: 900;
     font-size: 4rem;
-    color: #e9a054; }
+    color: #e9a054;
+    margin-bottom: 3rem; }
   html p {
     color: #413414;
-    line-height: 1.75rem; }
+    line-height: 2rem;
+    font-size: 1.25rem; }
   html i {
     font-size: .75rem;
     margin-bottom: .25rem; }
+  html svg {
+    fill: #e9a054; }
   html body {
     height: 100%;
     font-family: "Open Sans", serif;
@@ -36,6 +40,15 @@ html {
         justify-content: center;
         display: -ms-inline-flexbox;
         display: inline-flex; }
+        html body .container-fluid:nth-of-type(2) .social-media {
+          padding: 1rem; }
+          html body .container-fluid:nth-of-type(2) .social-media .instagram, html body .container-fluid:nth-of-type(2) .social-media .linkdin {
+            height: 30px;
+            width: 30px;
+            margin: 1rem; }
+            html body .container-fluid:nth-of-type(2) .social-media .instagram svg, html body .container-fluid:nth-of-type(2) .social-media .linkdin svg {
+              width: 100%;
+              height: 100%; }
     @media only screen and (min-width: 1200px) {
       html body .container-fluid:first-of-type {
         background-position: 50% 10%; } }
@@ -45,12 +58,16 @@ html {
         display: inline-flex;
         -ms-flex-direction: column;
         flex-direction: column; }
+        html body p {
+          font-size: 1rem;
+          line-height: 1.5rem; }
         html body .container-fluid {
           width: 100%;
           height: 100%;
           padding: 2rem; }
           html body .container-fluid h1 {
-            font-size: 3rem; }
+            font-size: 3rem;
+            margin-bottom: 2rem; }
           html body .container-fluid:first-of-type {
             background-position: 50% 10%;
             height: 50%; }
