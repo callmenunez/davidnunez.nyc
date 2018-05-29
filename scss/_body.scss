@@ -6,7 +6,6 @@ html {
     font-weight: 900;
     font-size: 4rem;
     color: #e9a054;
-    // padding-bottom: 3rem;
     margin-bottom: 3rem;
   }
   p {
@@ -20,6 +19,8 @@ html {
   }
   svg {
     fill: #e9a054;
+    width: 100%;
+    height: 100%;
   }
   body {
     height: 100%;
@@ -27,36 +28,113 @@ html {
     display: flex;
     .container-fluid {
       width: 50vw;
-      padding: 2rem 5rem;
-      &:first-of-type {
+      padding: 0;
+      .hero-img {
         background-color: #f4dcc0;
         background-image: url("../img/hero.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        height: 100%;
+        z-index: -1;
+        width: 50%;
+        position: absolute;
       }
+      .svg-animation {
+        background-image: url("../img/hero.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        z-index: 1;
+        width: 100%;
+        position: relative;
+        svg {
+          path {
+            stroke-width: 10;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-name: draw;
+            animation-timing-function: linear;
+            &#test {
+              stroke: pink;
+              stroke-dasharray: 130;
+              stroke-dashoffset: 130;
+              animation-duration: 1s;
+            }
+          }
+        }
+      }
+
+      // &:first-of-type {
+      //   background-color: #f4dcc0;
+      //   background-image: url("../img/hero.png");
+      //   background-size: cover;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   .svg-animation {
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     right: 0;
+      //     bottom: 0;
+      //     overflow: hidden;
+      //     width: 50%;
+      //   }
+      //   svg {
+      //     position: absolute;
+      //     left: 0;
+      //     right: 0;
+      //     top: -9999px;
+      //     bottom: -9999px;
+      //     margin: auto 0;
+      //     width: 100%;
+      //       path {
+      //         stroke-width: 4;
+      //         animation-fill-mode: forwards;
+      //         animation-iteration-count: 1;
+      //         animation-name: draw;
+      //         animation-timing-function: linear;
+      //         &#test {
+      //           stroke: #666;
+      //           stroke-dasharray: 130;
+      //           stroke-dashoffset: 130;
+      //           animation-duration: 1s;
+      //         }
+      //       }
+          
+
+      //   }
+      // }
       &:nth-of-type(2) {
         flex-direction: column;
         justify-content: center;
         display:inline-flex;
+        padding: 2rem 5rem;
         .social-media {
           padding: 1rem;
           .instagram, .linkdin {
             height:30px;
             width:30px;
             margin: 1rem;
-            svg {
-              width: 100%;
-              height: 100%;
-            }
+            // svg {
+            //   width: 100%;
+            //   height: 100%;
+            // }
           }
-          // div:first-of-type {
-          //   margin: 2rem 1rem 2rem;
-          // }
-          // div:last-of-type {
-          //   margin: 2rem 2rem 2rem 1rem;
-          // }
         }
+      }
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes show {
+      to {
+        opacity: 1;
       }
     }
     @media only screen and (min-width: 1200px) {
