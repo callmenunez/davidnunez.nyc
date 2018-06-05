@@ -1,21 +1,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 976" style="enable-background:new 0 0 600 976;" xml:space="preserve">
 <style type="text/css">
-          path {
-            stroke-width: 10;
-            animation-fill-mode: forwards;
-            animation-iteration-count: 1;
-            animation-name: draw;
-            animation-timing-function: linear;
-            <!-- & #test {
-              stroke: pink;
-              stroke-dasharray: 130;
-              stroke-dashoffset: 130;
-              animation-duration: 1s;
-            } -->
-          }
-	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	 
+	
 </style>
 <path class="st0" id="test" d="M421.5,224.5c0,14.4-11.6,26-26,26s-26-11.6-26-26s11.6-26,26-26"/>
 </svg>
