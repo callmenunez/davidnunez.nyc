@@ -31,8 +31,8 @@
 	</head>
 	
   <body>
-		<div class="container-fluid">
-      <div class="hero-img effect6">
+    <div class="container-fluid">
+      <div class="hero-img">
         &nbsp;
       </div>
     </div>
@@ -49,7 +49,7 @@
           </a>
         </div>
       </div>
-			<div class="text-left align-items-left">
+      <div class="text-left align-items-left">
         <h1>Cheers!</h1>
         <p>You've made it to my page <i class="em em-smile"></i>. 
           My name is David Nu&ntilde;ez, and I'm a graphic-designer-turned-front-end-developer (GDTFED for short). 
@@ -71,10 +71,16 @@
           While I'm no expert with javascript or jquery I'm constantly trying to polish these skills. 
           I'm steadily learning new things and always looking for advice or mentorship.
         </p>
-			</div>
-		</div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
+    <script>
+      var rand = Math.floor((Math.random()*2)+1);
+      console.log(rand);
+      var style = "style" + rand;
+      document.getElementsByTagName('body')[0].className+=style;
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
