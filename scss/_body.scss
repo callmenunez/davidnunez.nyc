@@ -92,7 +92,7 @@ html {
           background: #e77f55;
           max-width: 600px;
           padding: 3rem;
-          box-shadow: -40px -40px 0 #c0524e;
+          box-shadow: -30px -30px 0 -5px #c0524e, -30px -30px 0 #202020, -60px -60px 0 -5px #eba55d, -60px -60px 0 #202020,;
           h1 {
             font-family: 'Space Mono', monospace;
             font-weight: 700;
@@ -106,8 +106,22 @@ html {
           a {
             color: #202020;
             font-weight: 700;
-            text-decoration: line-through;
-            text-decoration-color: #eba55d;
+            position: relative;
+            &::after {
+              border-bottom: 0.5em solid rgba(235, 165, 93, 0.5);
+              content: "";
+              left: 0;
+              margin-top: calc(0.125em / 2 * -1);
+              position: absolute;
+              right: 0;
+              top: 100%;
+            }
+            &:hover {
+              text-decoration: none;
+              &::after {
+                border-bottom: 0.5em solid rgba(235, 165, 93, 1);
+              }
+            }
           }
         }
       }
