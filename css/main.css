@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,900,900i);
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700);
 html {
   font-size: 16px;
   height: 100%; }
@@ -59,17 +60,47 @@ html {
       padding: 4rem 5rem;
       overflow: scroll; }
       html body.style1 .container-fluid:nth-of-type(2) .social-media {
-        padding: 1rem; }
+        padding: 1rem;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
         html body.style1 .container-fluid:nth-of-type(2) .social-media .instagram, html body.style1 .container-fluid:nth-of-type(2) .social-media .linkdin {
           height: 30px;
           width: 30px;
           margin: 1rem; }
   html body.style2 {
-    background: pink; }
-  @media only screen and (max-width: 1200px) {
-    html body.style1 .container-fluid:nth-of-type(2) {
-      -ms-flex-pack: start;
-      justify-content: flex-start; } }
+    background: #de5c54;
+    color: #202020;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh; }
+    html body.style2 .container-fluid:first-of-type {
+      display: none; }
+    html body.style2 .container-fluid:nth-of-type(2) {
+      border: solid #202020 5px;
+      background: #e77f55;
+      max-width: 600px;
+      padding: 3rem;
+      box-shadow: -40px -40px 0 #c0524e; }
+      html body.style2 .container-fluid:nth-of-type(2) h1 {
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 6rem; }
+      html body.style2 .container-fluid:nth-of-type(2) p {
+        font-family: 'Space Mono', monospace;
+        font-size: .8625rem;
+        line-height: 2; }
+      html body.style2 .container-fluid:nth-of-type(2) a {
+        color: #202020;
+        font-weight: 700;
+        text-decoration: line-through;
+        -webkit-text-decoration-color: #eba55d;
+        text-decoration-color: #eba55d; }
   @media only screen and (max-width: 768px) {
     html body.style1 {
       display: -ms-inline-flexbox;
@@ -88,5 +119,7 @@ html {
         position: inherit; } }
   @media only screen and (max-width: 578px) {
     html body.style1 .container-fluid:nth-of-type(2) {
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       height: 60vh;
       padding: 2rem 2rem; } }
