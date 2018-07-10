@@ -84,6 +84,27 @@ html {
       align-items: center;
       height: 100vh;
       .container-fluid {
+        .social-media {
+          display: flex;
+          justify-content: space-between;
+          margin: 2rem;
+          a {
+            transition-duration: 1s;
+            &::after {
+              display: none;
+            }
+            &:hover {
+              svg {
+                transition-duration: 1s;
+                fill: rgba(235, 165, 93, 1);
+              }
+            }
+            svg {
+              height: 40px;
+              width: 40px;
+            }
+          }
+        }
         &:first-of-type {
           display: none;
         }

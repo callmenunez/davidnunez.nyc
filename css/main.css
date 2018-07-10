@@ -79,6 +79,22 @@ html {
     -ms-flex-align: center;
     align-items: center;
     height: 100vh; }
+    html body.style2 .container-fluid .social-media {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin: 2rem; }
+      html body.style2 .container-fluid .social-media a {
+        transition-duration: 1s; }
+        html body.style2 .container-fluid .social-media a::after {
+          display: none; }
+        html body.style2 .container-fluid .social-media a:hover svg {
+          transition-duration: 1s;
+          fill: #eba55d; }
+        html body.style2 .container-fluid .social-media a svg {
+          height: 40px;
+          width: 40px; }
     html body.style2 .container-fluid:first-of-type {
       display: none; }
     html body.style2 .container-fluid:nth-of-type(2) {
