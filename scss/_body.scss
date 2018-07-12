@@ -1,7 +1,7 @@
 html {
   font-size: 16px;
   height: 100%;
-  body {
+    body {
     &.style1 {
     height: 100vh;
     font-family: "Open Sans", serif;
@@ -63,10 +63,19 @@ html {
         display:inline-flex;
         padding: 4rem 5rem;
         overflow: scroll;
+        .header {
+          img {
+            display: none;
+          }
+        }
         .social-media {
           padding: 1rem;
           display: flex;
           justify-content: flex-end;
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 999;
           .instagram, .linkdin {
             height:30px;
             width:30px;
@@ -85,9 +94,13 @@ html {
       height: 100vh;
       .container-fluid {
         .social-media {
+          position: fixed;
+          top: 0;
+          left: 0;
           display: flex;
           justify-content: space-between;
-          margin: 2rem;
+          width: 100%;
+          padding: 2rem;
           a {
             transition-duration: 1s;
             &::after {
@@ -111,13 +124,30 @@ html {
         &:nth-of-type(2) {
           border: solid #202020 5px;
           background: #e77f55;
-          max-width: 600px;
+          max-width: 800px;
           padding: 3rem;
           box-shadow: -30px -30px 0 -5px #c0524e, -30px -30px 0 #202020, -60px -60px 0 -5px #eba55d, -60px -60px 0 #202020,;
-          h1 {
-            font-family: 'Space Mono', monospace;
-            font-weight: 700;
-            font-size: 6rem;
+          .header {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            img {
+              height: 200px;
+              width: auto;
+              -webkit-filter: sepia(1);
+              filter: sepia(1);
+              border: solid #202020 5px;
+              background: #eba55d;
+              margin-right: 1rem;
+              border-radius: 100%;
+            }
+            h1 {
+              font-family: 'Space Mono', monospace;
+              font-weight: 700;
+              font-size: 6rem;
+              margin-bottom: 0;
+              line-height: 5rem;
+            }
           }
           p {
             font-family: 'Space Mono', monospace;
@@ -169,6 +199,24 @@ html {
           }
         }
       }
+      &.style2 {
+        .container-fluid {
+          &:nth-of-type(2) {
+           margin: 6rem 4rem 4rem;
+           padding: 2rem;
+           max-width: 100vw;
+           box-shadow: -20px -20px 0 -5px #c0524e, -20px -20px 0 #202020, -40px -40px 0 -5px #eba55d, -40px -40px 0 #202020,;
+            .header {
+              img {
+                height: 150px;
+              }
+              h1 {
+                font-size: 4rem;
+              }
+            }
+          }
+        }
+      }
     }
     @media only screen and (max-width: 578px) {
       &.style1 {
@@ -177,6 +225,37 @@ html {
             justify-content: flex-start;
             height: 60vh;
             padding: 2rem 2rem;
+          }
+        }
+      }
+      &.style2 {
+        .container-fluid {
+          .social-media {
+            position:relative;
+            padding: 0;
+            a {
+              svg {
+                height: 30px;
+                width: 30px;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            overflow: scroll;
+            margin: 0;
+            height: 100vh;
+            justify-content: center;
+            .header {
+              flex-direction: column;
+              align-items: center;
+              img {
+                margin-right: 0;
+              }
+              h1 {
+                font-size: 3rem;
+                text-align: center;
+              }
+            }
           }
         }
       }

@@ -59,12 +59,18 @@ html {
       display: inline-flex;
       padding: 4rem 5rem;
       overflow: scroll; }
+      html body.style1 .container-fluid:nth-of-type(2) .header img {
+        display: none; }
       html body.style1 .container-fluid:nth-of-type(2) .social-media {
         padding: 1rem;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: end;
-        justify-content: flex-end; }
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999; }
         html body.style1 .container-fluid:nth-of-type(2) .social-media .instagram, html body.style1 .container-fluid:nth-of-type(2) .social-media .linkdin {
           height: 30px;
           width: 30px;
@@ -80,11 +86,15 @@ html {
     align-items: center;
     height: 100vh; }
     html body.style2 .container-fluid .social-media {
+      position: fixed;
+      top: 0;
+      left: 0;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin: 2rem; }
+      width: 100%;
+      padding: 2rem; }
       html body.style2 .container-fluid .social-media a {
         transition-duration: 1s; }
         html body.style2 .container-fluid .social-media a::after {
@@ -100,13 +110,29 @@ html {
     html body.style2 .container-fluid:nth-of-type(2) {
       border: solid #202020 5px;
       background: #e77f55;
-      max-width: 600px;
+      max-width: 800px;
       padding: 3rem;
       box-shadow: -30px -30px 0 -5px #c0524e, -30px -30px 0 #202020, -60px -60px 0 -5px #eba55d, -60px -60px 0 #202020; }
-      html body.style2 .container-fluid:nth-of-type(2) h1 {
-        font-family: 'Space Mono', monospace;
-        font-weight: 700;
-        font-size: 6rem; }
+      html body.style2 .container-fluid:nth-of-type(2) .header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        margin-bottom: 2.5rem; }
+        html body.style2 .container-fluid:nth-of-type(2) .header img {
+          height: 200px;
+          width: auto;
+          filter: sepia(1);
+          border: solid #202020 5px;
+          background: #eba55d;
+          margin-right: 1rem;
+          border-radius: 100%; }
+        html body.style2 .container-fluid:nth-of-type(2) .header h1 {
+          font-family: 'Space Mono', monospace;
+          font-weight: 700;
+          font-size: 6rem;
+          margin-bottom: 0;
+          line-height: 5rem; }
       html body.style2 .container-fluid:nth-of-type(2) p {
         font-family: 'Space Mono', monospace;
         font-size: .8625rem;
@@ -142,10 +168,41 @@ html {
       html body.style1 .container-fluid .hero-img {
         width: 100%;
         height: 40vh;
-        position: inherit; } }
+        position: inherit; }
+    html body.style2 .container-fluid:nth-of-type(2) {
+      margin: 6rem 4rem 4rem;
+      padding: 2rem;
+      max-width: 100vw;
+      box-shadow: -20px -20px 0 -5px #c0524e, -20px -20px 0 #202020, -40px -40px 0 -5px #eba55d, -40px -40px 0 #202020; }
+      html body.style2 .container-fluid:nth-of-type(2) .header img {
+        height: 150px; }
+      html body.style2 .container-fluid:nth-of-type(2) .header h1 {
+        font-size: 4rem; } }
   @media only screen and (max-width: 578px) {
     html body.style1 .container-fluid:nth-of-type(2) {
       -ms-flex-pack: start;
       justify-content: flex-start;
       height: 60vh;
-      padding: 2rem 2rem; } }
+      padding: 2rem 2rem; }
+    html body.style2 .container-fluid .social-media {
+      position: relative;
+      padding: 0; }
+      html body.style2 .container-fluid .social-media a svg {
+        height: 30px;
+        width: 30px; }
+    html body.style2 .container-fluid:nth-of-type(2) {
+      overflow: scroll;
+      margin: 0;
+      height: 100vh;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      html body.style2 .container-fluid:nth-of-type(2) .header {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center; }
+        html body.style2 .container-fluid:nth-of-type(2) .header img {
+          margin-right: 0; }
+        html body.style2 .container-fluid:nth-of-type(2) .header h1 {
+          font-size: 3rem;
+          text-align: center; } }
