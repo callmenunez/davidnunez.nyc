@@ -31,13 +31,13 @@
 	</head>
 	
   <body>
-		<div class="container-fluid">
-      <div class="hero-img effect6">
+    <div class="container-fluid">
+      <div class="hero-img">
         &nbsp;
       </div>
     </div>
-    <div class="container-fluid d-flex">
-      <div class="fixed-top social-media justify-content-end d-flex">
+    <div class="container-fluid">
+      <div class="social-media">
         <div class="linkdin">
           <a href="https://www.linkedin.com/in/david-nunez-a35ba969/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
@@ -49,8 +49,11 @@
           </a>
         </div>
       </div>
-			<div class="text-left align-items-left">
-        <h1>Cheers!</h1>
+      <div class="text-left align-items-left">
+        <div class="header">
+          <img src="img/headshot.png">
+          <h1>Cheers!</h1>
+        </div>
         <p>You've made it to my page <i class="em em-smile"></i>. 
           My name is David Nu&ntilde;ez, and I'm a graphic-designer-turned-front-end-developer (GDTFED for short). 
           I graduated from Pratt Institute with a Bachelors in Fine Arts, specializing in Communication Design. 
@@ -62,19 +65,25 @@
           I now focus on front end work at Web producing their marketing materials including 
           <a href="http://leads.web.com/" target="_blank">one-off</a> landing pages (WIP), 
           <a href="http://graphics.web.com/lighthouse_201806_omnicode_email85/index.html" target="_blank">too</a> 
-          <a href="https://marketing.yodle.com/assets/email/torchx-11762-remax/torchx-11762-remax.html target="_blank"">many</a> 
-          <a href="https://marketing.yodle.com/assets/email/web-12457-seo-playbook/web-12457-seo-playbook.html target="_blank"">responsive</a> 
-          <a href="https://marketing.yodle.com/assets/email/web-12608-lh-retail-email/web-12608-lh-retail-email.html target="_blank"">emails</a>, and debugging dreadful internet explorer errors.
+          <a href="https://marketing.yodle.com/assets/email/torchx-11762-remax/torchx-11762-remax.html" target="_blank">many</a> 
+          <a href="https://marketing.yodle.com/assets/email/web-12457-seo-playbook/web-12457-seo-playbook.html" target="_blank">responsive</a> 
+          <a href="https://marketing.yodle.com/assets/email/web-12608-lh-retail-email/web-12608-lh-retail-email.html" target="_blank">emails</a>, and debugging dreadful internet explorer errors.
         </p>
         <p>
-          I feel comfortable with html, css, sass, git, and gulp. 
-          While I'm no expert with javascript or jquery I'm constantly trying to polish these skills. 
+          I feel comfortable with HTML5, CSS3, SASS, Git, and Gulp. 
+          While I'm no expert with Javascript, jQuery, Nunjucks, or PHP I'm constantly trying to polish these skills. 
           I'm steadily learning new things and always looking for advice or mentorship.
         </p>
-			</div>
-		</div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
+    <script>
+      var rand = Math.floor((Math.random()*2)+1);
+      console.log(rand);
+      var style = "style" + rand;
+      document.getElementsByTagName('body')[0].className+=style;
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
