@@ -10,72 +10,77 @@ html {
     font-family: "Open Sans", serif;
     display: -ms-flexbox;
     display: flex; }
-    html body.style1 h1 {
-      font-family: "Playfair Display", serif;
-      font-weight: 900;
-      font-size: 4rem;
-      color: #e9a054;
-      margin-bottom: 2rem; }
-    html body.style1 p {
-      color: #413414;
-      line-height: 1.75rem;
-      font-size: .875rem; }
-      html body.style1 p a, html body.style1 p a:visited {
-        font-weight: 600;
-        color: #e9a054; }
-        html body.style1 p a:hover, html body.style1 p a:visited:hover {
-          text-decoration: none;
-          color: #9f5b14; }
-      html body.style1 p:last-of-type {
-        margin-bottom: 3rem; }
-    html body.style1 i {
-      font-size: .75rem;
-      margin-bottom: .25rem; }
-    html body.style1 svg {
-      fill: #e9a054;
-      width: 100%;
-      height: 100%; }
-      html body.style1 svg:hover {
-        fill: #9f5b14; }
-    html body.style1 .container-fluid:first-of-type {
+    html body.style1 div:first-of-type {
       padding: 0;
-      width: 100%; }
-    html body.style1 .container-fluid .hero-img {
-      background-color: #f4dcc0;
-      background-image: url("../img/davidnunez.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      width: 50%;
-      position: absolute;
-      background-position: 50% 10%;
-      border: solid 1rem #e9a054; }
-    html body.style1 .container-fluid:nth-of-type(2) {
+      width: 50%; }
+      html body.style1 div:first-of-type .hero-img {
+        background-color: #f4dcc0;
+        background-image: url("../img/davidnunez.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        background-position: 50% 10%;
+        border: solid 1rem #e9a054; }
+    html body.style1 div:nth-of-type(2) {
+      padding: 1rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999; }
+      html body.style1 div:nth-of-type(2) .instagram, html body.style1 div:nth-of-type(2) .linkdin {
+        height: 30px;
+        width: 30px;
+        margin: 1rem; }
+        html body.style1 div:nth-of-type(2) .instagram svg, html body.style1 div:nth-of-type(2) .linkdin svg {
+          fill: #e9a054;
+          width: 100%;
+          height: 100%; }
+          html body.style1 div:nth-of-type(2) .instagram svg:hover, html body.style1 div:nth-of-type(2) .linkdin svg:hover {
+            fill: #9f5b14; }
+    html body.style1 div:nth-of-type(3) {
       -ms-flex-direction: column;
       flex-direction: column;
       -ms-flex-pack: center;
-      justify-content: center;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      padding: 4rem 5rem;
-      overflow: scroll; }
-      html body.style1 .container-fluid:nth-of-type(2) .header img {
+      justify-content: center; }
+      html body.style1 div:nth-of-type(3) .headshot img {
         display: none; }
-      html body.style1 .container-fluid:nth-of-type(2) .social-media {
-        padding: 1rem;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 999; }
-        html body.style1 .container-fluid:nth-of-type(2) .social-media .instagram, html body.style1 .container-fluid:nth-of-type(2) .social-media .linkdin {
-          height: 30px;
-          width: 30px;
-          margin: 1rem; }
+      html body.style1 div:nth-of-type(3) .body-text {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 50%;
+        padding: 4rem 5rem;
+        height: 100vh;
+        overflow: scroll; }
+        html body.style1 div:nth-of-type(3) .body-text h1 {
+          font-family: "Playfair Display", serif;
+          font-weight: 900;
+          font-size: 4rem;
+          color: #e9a054;
+          margin-bottom: 2rem; }
+        html body.style1 div:nth-of-type(3) .body-text p {
+          color: #413414;
+          line-height: 1.75rem;
+          font-size: .875rem; }
+          html body.style1 div:nth-of-type(3) .body-text p a, html body.style1 div:nth-of-type(3) .body-text p a:visited {
+            font-weight: 600;
+            color: #e9a054; }
+            html body.style1 div:nth-of-type(3) .body-text p a:hover, html body.style1 div:nth-of-type(3) .body-text p a:visited:hover {
+              text-decoration: none;
+              color: #9f5b14; }
+          html body.style1 div:nth-of-type(3) .body-text p:last-of-type {
+            margin-bottom: 3rem; }
+        html body.style1 div:nth-of-type(3) .body-text i {
+          font-size: .75rem;
+          margin-bottom: .25rem; }
   html body.style2 {
     background: #de5c54;
     color: #202020;
