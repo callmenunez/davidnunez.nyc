@@ -110,16 +110,14 @@ html {
       justify-content: space-between;
       padding: 2rem;
       width: 100vw; }
-      html body.style2 section.social-media a {
-        transition-duration: 1s; }
-        html body.style2 section.social-media a::after {
-          display: none; }
-        html body.style2 section.social-media a:hover svg {
-          transition-duration: 1s;
-          fill: #eba55d; }
-        html body.style2 section.social-media a svg {
-          height: 40px;
-          width: 40px; }
+      html body.style2 section.social-media a:hover svg {
+        transition-duration: 1s;
+        fill: #eba55d; }
+      html body.style2 section.social-media a svg {
+        transition-duration: 1s;
+        fill: #202020;
+        height: 40px;
+        width: 40px; }
     html body.style2 section.bio {
       border: solid #202020 5px;
       background: #e77f55;
@@ -170,13 +168,13 @@ html {
   html body.style3 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 5% 30% 10% 50% 5%;
-    grid-template-columns: 5% 30% 10% 50% 5%;
-    -ms-grid-rows: 5% 30% 20% 40% 5%;
-    grid-template-rows: 5% 30% 20% 40% 5%;
+    -ms-grid-columns: auto minmax(auto, 250px) 10% minmax(auto, 600px) auto;
+    grid-template-columns: auto minmax(auto, 250px) 10% minmax(auto, 600px) auto;
+    -ms-grid-rows: auto 30% 20% 40% auto;
+    grid-template-rows: auto 30% 20% 40% auto;
     background-image: repeating-linear-gradient(135deg, #fff, #fff 20px, rgba(255, 0, 255, 0.5) 20px, rgba(255, 0, 255, 0.5) 22px);
     height: 100vh; }
-    html body.style3 .container-fluid:first-of-type {
+    html body.style3 section.hero-img {
       grid-area: 2 / 2 / span 2 / span 2;
       background-color: cyan;
       background-blend-mode: screen;
@@ -186,43 +184,47 @@ html {
       opacity: .95;
       z-index: -1;
       box-shadow: 20px 20px rgba(255, 0, 255, 0.5); }
-    html body.style3 .container-fluid:last-of-type {
+    html body.style3 section.social-media {
+      grid-area: 3 / 3 / span 2 / span 2;
+      z-index: 2;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      height: 60px; }
+      html body.style3 section.social-media a svg {
+        margin: 1rem;
+        transition-duration: 1s;
+        fill: cyan;
+        width: 30px;
+        height: 30px; }
+      html body.style3 section.social-media a:hover svg {
+        transition-duration: 1s;
+        fill: rgba(255, 0, 255, 0.5); }
+    html body.style3 section.bio {
       grid-area: 3 / 3 / span 2 / span 2;
       background-color: rgba(255, 255, 255, 0.95);
       box-shadow: -30px 30px rgba(255, 255, 0, 0.75);
       overflow: scroll;
-      padding: 0 2rem 2rem 2rem;
+      padding: 4rem 2rem 2rem;
       border: 2px solid cyan; }
-      html body.style3 .container-fluid:last-of-type .social-media {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        padding-top: 1rem; }
-        html body.style3 .container-fluid:last-of-type .social-media svg {
-          fill: cyan;
-          width: 30px;
-          height: 30px;
-          margin: 1rem; }
-      html body.style3 .container-fluid:last-of-type img {
+      html body.style3 section.bio .header img {
         display: none; }
-      html body.style3 .container-fluid:last-of-type .header h1 {
+      html body.style3 section.bio .header h1 {
         grid-area: 4 / 3 / span 2 / span 4;
-        font-size: 12vw;
+        font-size: 8vw;
         font-weight: 800;
         font-style: italic;
         text-transform: uppercase;
         color: rgba(255, 0, 255, 0.5);
         line-height: 10vw;
-        margin-bottom: 2rem; }
-      html body.style3 .container-fluid:last-of-type p {
+        margin-bottom: 1rem; }
+      html body.style3 section.bio .body-text p {
         color: rgba(0, 0, 0, 0.75); }
-        html body.style3 .container-fluid:last-of-type p a {
+        html body.style3 section.bio .body-text p a {
           color: magenta; }
-          html body.style3 .container-fluid:last-of-type p a:hover {
+          html body.style3 section.bio .body-text p a:hover {
             color: rgba(255, 0, 255, 0.5); }
-      html body.style3 .container-fluid:last-of-type div:nth-of-type(2) {
-        max-width: 800px; }
   @media only screen and (max-width: 768px) {
     html body.style1 {
       display: -ms-inline-flexbox;
@@ -246,7 +248,10 @@ html {
       html body.style2 section.bio .header img {
         height: 150px; }
       html body.style2 section.bio .header h1 {
-        font-size: 4rem; } }
+        font-size: 4rem; }
+    html body.style3 {
+      -ms-grid-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto;
+      grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto; } }
   @media only screen and (max-width: 578px) {
     html body.style1 section.hero-img {
       border: solid .5rem #e9a054; }
@@ -277,16 +282,25 @@ html {
         html body.style2 section.bio .header h1 {
           font-size: 3rem;
           text-align: center; }
-    html body.style3 .container-fluid:first-of-type {
-      grid-area: 4 / 2 / span 1 / span 3;
-      z-index: 1; }
-    html body.style3 .container-fluid:last-of-type {
-      grid-area: 2 / 2 / span 2 / span 3;
-      padding: 0 1rem 1rem 1rem; }
-      html body.style3 .container-fluid:last-of-type .social-media svg {
-        margin: .5rem;
-        width: 30px;
-        height: 30px; }
-      html body.style3 .container-fluid:last-of-type .header h1 {
-        font-size: 15vw;
-        margin-top: 1rem; } }
+    html body.style3 {
+      -ms-grid-columns: 5% 90% 5%;
+      grid-template-columns: 5% 90% 5%;
+      -ms-grid-rows: auto 30% auto 25% 30% auto;
+      grid-template-rows: auto 30% auto 25% 30% auto; }
+      html body.style3 section.hero-img {
+        grid-area: 1 / 2 / span 2 / span 1;
+        z-index: 1; }
+      html body.style3 section.social-media {
+        grid-area: 1 / 2 / span 2 / span 1;
+        padding: .5rem; }
+        html body.style3 section.social-media a svg {
+          margin: .5rem;
+          width: 30px;
+          height: 30px;
+          fill: #ffffff; }
+      html body.style3 section.bio {
+        grid-area: 4 / 2 / span 2 / span 1;
+        padding: 3rem 1rem 1rem; }
+        html body.style3 section.bio .header h1 {
+          font-size: 4rem;
+          margin-bottom: 2rem; } }

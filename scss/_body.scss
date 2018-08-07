@@ -109,10 +109,6 @@ html {
         padding: 2rem;
         width: 100vw;
         a {
-          transition-duration: 1s;
-          &::after {
-            display: none;
-          }
           &:hover {
             svg {
               transition-duration: 1s;
@@ -120,6 +116,8 @@ html {
             }
           }
           svg {
+            transition-duration: 1s;
+            fill: #202020;
             height: 40px;
             width: 40px;
           }
@@ -185,55 +183,66 @@ html {
     }
     &.style3 {
       display: grid;
-      grid-template-columns: 5% 30% 10% 50% 5%;
-      grid-template-rows: 5% 30% 20% 40% 5%;
+      grid-template-columns: auto minmax(auto, 250px) 10% minmax(auto, 600px) auto;
+      grid-template-rows: auto 30% 20% 40% auto;
       background-image: repeating-linear-gradient(135deg, #fff, #fff 20px, rgba(255,0,255, .5) 20px, rgba(255,0,255, .5) 22px);
       height: 100vh;
-      .container-fluid {
-        &:first-of-type {
-          grid-area: 2 / 2 / span 2 / span 2;
-          background-color: rgba(0, 255, 255, 1);
-          background-blend-mode: screen;
-          background-image: url("../img/davidnunez.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          opacity: .95;
-          z-index: -1;
-          box-shadow: 20px 20px rgba(255,0,255,.5);
-        }
-        &:last-of-type {
-          grid-area: 3 / 3 / span 2 / span 2;
-          background-color: rgba(255,255,255,.95);
-          box-shadow: -30px 30px rgba(255,255,0,.75);
-          overflow: scroll;
-          padding: 0 2rem 2rem 2rem;
-          border: 2px solid cyan;
-          .social-media {
-            display: flex;
-            justify-content: flex-end;
-            padding-top: 1rem;
+      section.hero-img {
+        grid-area: 2 / 2 / span 2 / span 2;
+        background-color: rgba(0, 255, 255, 1);
+        background-blend-mode: screen;
+        background-image: url("../img/davidnunez.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .95;
+        z-index: -1;
+        box-shadow: 20px 20px rgba(255,0,255,.5);
+      }
+      section.social-media {
+        grid-area: 3 / 3 / span 2 / span 2;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
+        height: 60px;
+        a {
+          svg {
+            margin: 1rem;
+            transition-duration: 1s;
+            fill: rgba(0,255,255,1);
+            width: 30px;
+            height: 30px;
+          }
+          &:hover {
             svg {
-              fill: rgba(0,255,255,1);
-              width:30px;
-              height: 30px;
-              margin: 1rem;
+              transition-duration: 1s;
+              fill: rgba(255,0,255,.5);
             }
           }
+        }
+      }
+      section.bio {
+        grid-area: 3 / 3 / span 2 / span 2;
+        background-color: rgba(255,255,255,.95);
+        box-shadow: -30px 30px rgba(255,255,0,.75);
+        overflow: scroll;
+        padding: 4rem 2rem 2rem;
+        border: 2px solid cyan;
+        .header {
           img {
             display: none;
           }
-          .header {
-            h1 {
-              grid-area: 4 / 3 / span 2 / span 4;
-              font-size: 12vw;
-              font-weight: 800;
-              font-style: italic;
-              text-transform: uppercase;
-              color: rgba(255,0,255,.5);
-              line-height: 10vw;
-              margin-bottom: 2rem;
-            }
+          h1 {
+            grid-area: 4 / 3 / span 2 / span 4;
+            font-size: 8vw;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            color: rgba(255,0,255,.5);
+            line-height: 10vw;
+            margin-bottom: 1rem;
           }
+        }
+        .body-text{
           p {
             color: rgba(0,0,0, .75);
             a {
@@ -242,10 +251,6 @@ html {
                 color: rgba(255,0,255, .5);
               }
             }
-          }
-          div:nth-of-type(2) {
-            max-width: 800px;
-
           }
         }
       }
@@ -282,6 +287,9 @@ html {
             }
           }
         }
+      }
+      &.style3 {
+        grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto;
       }
     }
     @media only screen and (max-width: 578px) {
@@ -326,26 +334,31 @@ html {
         }
       }
       &.style3 {
-        .container-fluid {
-          &:first-of-type {
-            grid-area: 4 / 2 / span 1 / span 3;
-            z-index: 1;
-          }
-          &:last-of-type {
-            grid-area: 2 / 2 / span 2 / span 3;
-            padding: 0 1rem 1rem 1rem;
-            .social-media {
-              svg {
-                margin: .5rem;
-                width: 30px;
-                height: 30px;
-              }
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: auto 30% auto 25% 30% auto;
+        section.hero-img {
+          grid-area: 1 / 2 / span 2 / span 1;
+          z-index: 1;
+        }
+        section.social-media {
+          grid-area: 1 / 2 / span 2 / span 1;
+          padding: .5rem;
+          a {
+            svg {
+            margin: .5rem;
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
             }
-            .header {
-              h1 {
-                font-size: 15vw;
-                margin-top: 1rem;
-              }
+          }
+        }
+        section.bio {
+          grid-area: 4 / 2 / span 2 / span 1;
+          padding: 3rem 1rem 1rem;
+          .header {
+            h1 {
+              font-size: 4rem;
+              margin-bottom: 2rem;
             }
           }
         }
