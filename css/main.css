@@ -238,6 +238,9 @@ html {
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center; }
+    html body.style4 section.social-media {
+      -ms-flex-order: 4;
+      order: 4; }
     html body.style4 section.bio {
       max-width: 600px;
       min-width: 300px;
