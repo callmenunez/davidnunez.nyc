@@ -80,10 +80,17 @@
 
     <!-- Optional JavaScript -->
     <script>
-      var rand = Math.floor((Math.random()*3)+1);
+      //controls the randomly generated styles
+      var rand = Math.floor((Math.random()*4)+1);
       console.log(rand);
       var style = "style" + rand;
       document.getElementsByTagName('body')[0].className+=style;
+
+      //removes exclamation point from style4
+      if (rand === 4) {
+        elements = document.getElementsByTagName('h1');
+        elements[0].innerHTML = elements[0].innerHTML.replace(/!/g,'');
+      } 
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

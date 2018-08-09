@@ -255,6 +255,58 @@ html {
         }
       }
     }
+    &.style4 {
+      $bg-color: #ffffff;
+      $dot-color: #A9A9A9;
+      $dot-size: 2px;
+      $dot-space: 24px;
+      background:linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+        $dot-color;
+      background-size: $dot-space $dot-space;
+      border: solid 4rem #ffffff;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction:column;
+      align-items: center;
+      section.bio {
+        max-width: 600px;
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 100%;
+            background: #F0F0F0	;
+            filter: grayscale(100%);
+            opacity: .75;
+          }
+          h1 {
+            width: 3ch;
+            font-size: 10rem;
+            line-height: 8rem;
+            overflow-wrap: break-word;
+            font-family: 'Space Mono', Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: rgba(0,0,0, .25)
+          }
+        }
+        .body-text {
+          p {
+            text-align: justify;
+            color: rgba(0,0,0, .75)
+          }
+        }
+      }
+    }
     @media only screen and (max-width: 1200px) {
     }
     @media only screen and (max-width: 768px) {

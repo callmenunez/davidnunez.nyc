@@ -225,6 +225,55 @@ html {
           color: magenta; }
           html body.style3 section.bio .body-text p a:hover {
             color: rgba(255, 0, 255, 0.5); }
+  html body.style4 {
+    background: linear-gradient(90deg, #ffffff 22px, transparent 1%) center, linear-gradient(#ffffff 22px, transparent 1%) center, #A9A9A9;
+    background-size: 24px 24px;
+    border: solid 4rem #ffffff;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center; }
+    html body.style4 section.bio {
+      max-width: 600px;
+      min-width: 300px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      html body.style4 section.bio .header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center; }
+        html body.style4 section.bio .header img {
+          width: 20rem;
+          height: 20rem;
+          border-radius: 100%;
+          background: #F0F0F0;
+          filter: grayscale(100%);
+          opacity: .75; }
+        html body.style4 section.bio .header h1 {
+          width: 3ch;
+          font-size: 10rem;
+          line-height: 8rem;
+          overflow-wrap: break-word;
+          font-family: 'Space Mono', Helvetica, sans-serif;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.25); }
+      html body.style4 section.bio .body-text p {
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.75); }
   @media only screen and (max-width: 768px) {
     html body.style1 {
       display: -ms-inline-flexbox;
