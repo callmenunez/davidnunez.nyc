@@ -255,6 +255,114 @@ html {
         }
       }
     }
+    &.style4 {
+      $bg-color: #ffffff;
+      $dot-color: #A9A9A9;
+      $dot-size: 2px;
+      $dot-space: 24px;
+      background:linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+        $dot-color;
+      background-size: $dot-space $dot-space;
+      display: flex;
+      justify-content: center;
+      flex-direction:column;
+      align-items: center;
+      section.social-media {
+        width: 100vw;
+        position: fixed;
+        top: 45vh;
+        display: flex;
+        justify-content: space-between;
+        .linkdin, .instagram {
+          padding: 1rem;
+          a {
+            display: flex;
+            padding: 1rem;
+            svg {
+              width: 30px;
+              height: 30px;
+              fill: rgba(0,0,0, .25);
+              transition: 1s;
+              &:hover {
+                fill: rgba(231, 87, 96, 1);
+                transition: 1s;
+              }
+            }
+          }
+        }
+      }
+      section.bio {
+        height: 100vh;
+        max-width: 900px;
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .header {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 6rem;
+          border-bottom: 1px solid rgba(231, 87, 96, 1);
+          margin-bottom: 6rem;
+          width: 10rem;
+          img {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 100%;
+            background: #F0F0F0	;
+            filter: grayscale(100%);
+            opacity: .5;
+            position: absolute;
+          }
+          h1 {
+            font-size: 12rem;
+            line-height: 12rem;
+            overflow-wrap: break-word;
+            font-family: 'Space Mono', Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: rgba(231, 87, 96, 1);
+            opacity: .5;
+            margin-bottom: 0;
+          }
+        }
+        .body-text {
+          background-color: #fff;
+          padding: 2rem;
+          column-count: 2;
+          column-gap: 4rem;
+          column-rule-style: solid;
+          column-rule-width: 1px;
+          column-rule-color: #dedede;
+          p {
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            line-height: 1.75;
+            color: rgba(0,0,0, .75);
+            font-size: .875rem;
+            &:first-child:first-letter {
+              float: left;
+              color: rgba(0,0,0, .25);
+              font-size: 5rem;
+              line-height: 4rem;
+            }
+            a {
+              color: rgba(0,0,0, .75);
+              background-color: rgba(231, 87, 96, .15);
+              &:hover {
+                text-decoration: none;
+                background-color: rgba(231, 87, 96, .5);
+                transition-duration: .5s;
+
+              }
+            }
+          }
+        }
+      }
+    }
     @media only screen and (max-width: 1200px) {
     }
     @media only screen and (max-width: 768px) {
@@ -290,6 +398,19 @@ html {
       }
       &.style3 {
         grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto;
+      }
+      &.style4 {
+        section.social-media {
+          top: auto;
+          bottom: 0;
+        }
+        section.bio {
+          max-width: 600px;
+          .body-text {
+            column-count: 1 
+
+          }
+        }
       }
     }
     @media only screen and (max-width: 578px) {
@@ -359,6 +480,26 @@ html {
             h1 {
               font-size: 4rem;
               margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+      &.style4 {
+        section.social-media {
+          top: 0;
+        }
+        section.bio {
+          height: auto;
+          .header {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            img {
+              position: inherit;
+              margin: 4rem 0 2rem;
+            }
+            h1 {
+              font-size: 4rem;
+              line-height: 4rem;
             }
           }
         }

@@ -56,12 +56,12 @@
       <div class="body-text">
         <!-- <h1>Cheers!</h1> -->
         <p>You've made it to my page <i class="em em-smile"></i>. 
-          My name is David Nu&ntilde;ez; I'm a graphic-designer-turned-front-end-developer (GDTFED for short). 
+          My name is David Nu&ntilde;ez; I'm a graphic-designer-turned-front-end-developer (GDTFED for short, jk). 
           I graduated from Pratt Institute with a Bachelors in Fine Arts, specializing in Communication Design. 
           In the years following graduation I've worked at <a href="http://nyam.org/" target="_blank">non-profits</a>, <a href="https://www.drinkuproot.com/" target="_blank">start-ups</a>, and <a href="http://www.verbalplusvisual.com/" target="_blank">small agencies</a>.
         </p>
         <p>
-          After several years in design, I realized I was more interested in front-end development.
+          After several years in design I realized I was more interested in front-end development.
           I finally made my career jump while at Web.com (with training from General Assembly).    
           I now focus on front end work at Web producing their marketing materials including 
           <a href="http://leads.web.com/" target="_blank">one-off</a> landing pages (WIP), 
@@ -80,10 +80,17 @@
 
     <!-- Optional JavaScript -->
     <script>
-      var rand = Math.floor((Math.random()*3)+1);
+      //controls the randomly generated styles
+      var rand = Math.floor((Math.random()*4)+1);
       console.log(rand);
       var style = "style" + rand;
       document.getElementsByTagName('body')[0].className+=style;
+
+      //removes exclamation point from style4
+      if (rand === 4) {
+        elements = document.getElementsByTagName('h1');
+        elements[0].innerHTML = elements[0].innerHTML.replace(/!/g,'');
+      } 
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
