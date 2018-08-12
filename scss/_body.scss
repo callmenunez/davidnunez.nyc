@@ -283,6 +283,11 @@ html {
               width: 30px;
               height: 30px;
               fill: rgba(0,0,0, .25);
+              transition: 1s;
+              &:hover {
+                fill: rgba(231, 87, 96, 1);
+                transition: 1s;
+              }
             }
           }
         }
@@ -301,19 +306,20 @@ html {
           position: relative;
           justify-content: center;
           align-items: center;
-          padding-bottom: 4rem;
+          padding-bottom: 6rem;
+          border-bottom: 1px solid rgba(231, 87, 96, 1);
+          margin-bottom: 6rem;
+          width: 10rem;
           img {
             width: 15rem;
             height: 15rem;
             border-radius: 100%;
             background: #F0F0F0	;
             filter: grayscale(100%);
-            opacity: .75;
+            opacity: .5;
             position: absolute;
-            z-index:1;
           }
           h1 {
-            width: 3ch;
             font-size: 12rem;
             line-height: 12rem;
             overflow-wrap: break-word;
@@ -321,6 +327,7 @@ html {
             text-transform: uppercase;
             color: rgba(231, 87, 96, 1);
             opacity: .5;
+            margin-bottom: 0;
           }
         }
         .body-text {
@@ -341,9 +348,6 @@ html {
               color: rgba(0,0,0, .25);
               font-size: 5rem;
               line-height: 4rem;
-              // padding-top: 4px;
-              // padding-right: 8px;
-              // padding-left: 3px;
             }
             a {
               color: rgba(0,0,0, .75);
@@ -394,6 +398,19 @@ html {
       }
       &.style3 {
         grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto;
+      }
+      &.style4 {
+        section.social-media {
+          top: auto;
+          bottom: 0;
+        }
+        section.bio {
+          max-width: 600px;
+          .body-text {
+            column-count: 1 
+
+          }
+        }
       }
     }
     @media only screen and (max-width: 578px) {
@@ -463,6 +480,26 @@ html {
             h1 {
               font-size: 4rem;
               margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+      &.style4 {
+        section.social-media {
+          top: 0;
+        }
+        section.bio {
+          height: auto;
+          .header {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            img {
+              position: inherit;
+              margin: 4rem 0 2rem;
+            }
+            h1 {
+              font-size: 4rem;
+              line-height: 4rem;
             }
           }
         }

@@ -253,7 +253,11 @@ html {
           html body.style4 section.social-media .linkdin a svg, html body.style4 section.social-media .instagram a svg {
             width: 30px;
             height: 30px;
-            fill: rgba(0, 0, 0, 0.25); }
+            fill: rgba(0, 0, 0, 0.25);
+            transition: 1s; }
+            html body.style4 section.social-media .linkdin a svg:hover, html body.style4 section.social-media .instagram a svg:hover {
+              fill: #e75760;
+              transition: 1s; }
     html body.style4 section.bio {
       height: 100vh;
       max-width: 900px;
@@ -276,25 +280,27 @@ html {
         justify-content: center;
         -ms-flex-align: center;
         align-items: center;
-        padding-bottom: 4rem; }
+        padding-bottom: 6rem;
+        border-bottom: 1px solid #e75760;
+        margin-bottom: 6rem;
+        width: 10rem; }
         html body.style4 section.bio .header img {
           width: 15rem;
           height: 15rem;
           border-radius: 100%;
           background: #F0F0F0;
           filter: grayscale(100%);
-          opacity: .75;
-          position: absolute;
-          z-index: 1; }
+          opacity: .5;
+          position: absolute; }
         html body.style4 section.bio .header h1 {
-          width: 3ch;
           font-size: 12rem;
           line-height: 12rem;
           overflow-wrap: break-word;
           font-family: 'Space Mono', Helvetica, sans-serif;
           text-transform: uppercase;
           color: #e75760;
-          opacity: .5; }
+          opacity: .5;
+          margin-bottom: 0; }
       html body.style4 section.bio .body-text {
         background-color: #fff;
         padding: 2rem;
@@ -346,7 +352,14 @@ html {
         font-size: 4rem; }
     html body.style3 {
       -ms-grid-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto;
-      grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto; } }
+      grid-template-columns: auto minmax(auto, 225px) 10% minmax(auto, 350px) auto; }
+    html body.style4 section.social-media {
+      top: auto;
+      bottom: 0; }
+    html body.style4 section.bio {
+      max-width: 600px; }
+      html body.style4 section.bio .body-text {
+        column-count: 1; } }
   @media only screen and (max-width: 578px) {
     html body.style1 section.hero-img {
       border: solid .5rem #e9a054; }
@@ -398,4 +411,17 @@ html {
         padding: 3rem 1rem 1rem; }
         html body.style3 section.bio .header h1 {
           font-size: 4rem;
-          margin-bottom: 2rem; } }
+          margin-bottom: 2rem; }
+    html body.style4 section.social-media {
+      top: 0; }
+    html body.style4 section.bio {
+      height: auto; }
+      html body.style4 section.bio .header {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem; }
+        html body.style4 section.bio .header img {
+          position: inherit;
+          margin: 4rem 0 2rem; }
+        html body.style4 section.bio .header h1 {
+          font-size: 4rem;
+          line-height: 4rem; } }
