@@ -39,12 +39,12 @@ gulp.task('browserSync', function () {
     });
 });
 
-gulp.task('php', function () {
-    return gulp.src('*.php')
-        .pipe(plumber())
-        .pipe(browserSync.reload({stream: true}))
-        .on('error', gutil.log);
-});
+// gulp.task('php', function () {
+//     return gulp.src('*.php')
+//         .pipe(plumber())
+//         .pipe(browserSync.reload({stream: true}))
+//         .on('error', gutil.log);
+// });
 
 gulp.task('inlinesource', function () {
     const options = {

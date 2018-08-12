@@ -228,8 +228,6 @@ html {
   html body.style4 {
     background: linear-gradient(90deg, #ffffff 22px, transparent 1%) center, linear-gradient(#ffffff 22px, transparent 1%) center, #A9A9A9;
     background-size: 24px 24px;
-    border: solid 4rem #ffffff;
-    height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -239,10 +237,26 @@ html {
     -ms-flex-align: center;
     align-items: center; }
     html body.style4 section.social-media {
-      -ms-flex-order: 4;
-      order: 4; }
+      width: 100vw;
+      position: fixed;
+      top: 45vh;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      html body.style4 section.social-media .linkdin, html body.style4 section.social-media .instagram {
+        padding: 1rem; }
+        html body.style4 section.social-media .linkdin a, html body.style4 section.social-media .instagram a {
+          display: -ms-flexbox;
+          display: flex;
+          padding: 1rem; }
+          html body.style4 section.social-media .linkdin a svg, html body.style4 section.social-media .instagram a svg {
+            width: 30px;
+            height: 30px;
+            fill: rgba(0, 0, 0, 0.25); }
     html body.style4 section.bio {
-      max-width: 600px;
+      height: 100vh;
+      max-width: 900px;
       min-width: 300px;
       display: -ms-flexbox;
       display: flex;
@@ -257,26 +271,55 @@ html {
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
+        position: relative;
+        -ms-flex-pack: center;
+        justify-content: center;
         -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+        padding-bottom: 4rem; }
         html body.style4 section.bio .header img {
-          width: 20rem;
-          height: 20rem;
+          width: 15rem;
+          height: 15rem;
           border-radius: 100%;
           background: #F0F0F0;
           filter: grayscale(100%);
-          opacity: .75; }
+          opacity: .75;
+          position: absolute;
+          z-index: 1; }
         html body.style4 section.bio .header h1 {
           width: 3ch;
-          font-size: 10rem;
-          line-height: 8rem;
+          font-size: 12rem;
+          line-height: 12rem;
           overflow-wrap: break-word;
           font-family: 'Space Mono', Helvetica, sans-serif;
           text-transform: uppercase;
-          color: rgba(0, 0, 0, 0.25); }
-      html body.style4 section.bio .body-text p {
-        text-align: justify;
-        color: rgba(0, 0, 0, 0.75); }
+          color: #e75760;
+          opacity: .5; }
+      html body.style4 section.bio .body-text {
+        background-color: #fff;
+        padding: 2rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule-style: solid;
+        column-rule-width: 1px;
+        column-rule-color: #dedede; }
+        html body.style4 section.bio .body-text p {
+          font-family: 'Open Sans', Helvetica, sans-serif;
+          line-height: 1.75;
+          color: rgba(0, 0, 0, 0.75);
+          font-size: .875rem; }
+          html body.style4 section.bio .body-text p:first-child:first-letter {
+            float: left;
+            color: rgba(0, 0, 0, 0.25);
+            font-size: 5rem;
+            line-height: 4rem; }
+          html body.style4 section.bio .body-text p a {
+            color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(231, 87, 96, 0.15); }
+            html body.style4 section.bio .body-text p a:hover {
+              text-decoration: none;
+              background-color: rgba(231, 87, 96, 0.5);
+              transition-duration: .5s; }
   @media only screen and (max-width: 768px) {
     html body.style1 {
       display: -ms-inline-flexbox;
