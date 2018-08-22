@@ -490,10 +490,11 @@ html {
         section.social-media {
           top: 0;
           height: 80px;
+          z-index: 1;
         }
         section.bio {
           height: auto;
-          z-index: -1;
+          z-index: 0;
           .header {
             padding-bottom: 2rem;
             margin-bottom: 2rem;
