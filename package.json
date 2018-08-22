@@ -2,7 +2,9 @@
   "name": "davidnunez.nyc",
   "version": "0.0.1",
   "description": "Base Project",
-  "dependencies": {},
+  "dependencies": {
+    "lodash.update": "^4.10.2"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-es2015-node4": "^2.1.1",
