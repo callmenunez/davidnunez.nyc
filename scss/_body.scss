@@ -29,6 +29,7 @@ html {
       justify-content: flex-end;
       z-index: 100;
       width: 100vw;
+      height: 100px;
       .linkdin, .instagram {
         height:30px;
         width:30px;
@@ -300,6 +301,7 @@ html {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        z-index: 2;
         .header {
           display: flex;
           flex-direction: column;
@@ -487,9 +489,11 @@ html {
       &.style4 {
         section.social-media {
           top: 0;
+          height: 80px;
         }
         section.bio {
           height: auto;
+          z-index: -1;
           .header {
             padding-bottom: 2rem;
             margin-bottom: 2rem;

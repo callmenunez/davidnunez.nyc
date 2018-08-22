@@ -36,7 +36,8 @@ html {
       -ms-flex-pack: end;
       justify-content: flex-end;
       z-index: 100;
-      width: 100vw; }
+      width: 100vw;
+      height: 100px; }
       html body.style1 section.social-media .linkdin, html body.style1 section.social-media .instagram {
         height: 30px;
         width: 30px;
@@ -269,7 +270,8 @@ html {
       -ms-flex-pack: center;
       justify-content: center;
       -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+      z-index: 2; }
       html body.style4 section.bio .header {
         display: -ms-flexbox;
         display: flex;
@@ -413,9 +415,11 @@ html {
           font-size: 4rem;
           margin-bottom: 2rem; }
     html body.style4 section.social-media {
-      top: 0; }
+      top: 0;
+      height: 80px; }
     html body.style4 section.bio {
-      height: auto; }
+      height: auto;
+      z-index: -1; }
       html body.style4 section.bio .header {
         padding-bottom: 2rem;
         margin-bottom: 2rem; }
