@@ -29,8 +29,6 @@
     <link rel="icon" href="img/favicon-32.png" sizes="32x32">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -59,12 +57,8 @@
     </section>
     <!-- Body with Headline -->
     <section class="bio">
-      <div class="header">
-        <img src="img/headshot.png">
+      <div>
         <h1>Cheers!</h1>
-      </div>
-      <div class="body-text">
-        <!-- <h1>Cheers!</h1> -->
         <p>You've made it to my page <i class="em em-smile"></i>. 
           My name is David Nu&ntilde;ez; I'm a graphic-designer-turned-front-end-developer (GDTFED for short, jk). 
           I graduated from Pratt Institute with a Bachelors in Fine Arts, specializing in Communication Design. 
@@ -89,23 +83,5 @@
       </div>
     </section>
 
-    <!-- Optional JavaScript -->
-    <script>
-      //controls the randomly generated styles
-      var rand = Math.floor((Math.random()*4)+1);
-      console.log(rand);
-      var style = "style" + rand;
-      document.getElementsByTagName('body')[0].className+=style;
-
-      //removes exclamation point from style4
-      if (rand === 4) {
-        elements = document.getElementsByTagName('h1');
-        elements[0].innerHTML = elements[0].innerHTML.replace(/!/g,'');
-      } 
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
