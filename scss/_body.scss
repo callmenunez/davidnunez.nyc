@@ -90,7 +90,7 @@ html {
       display: inline-flex;
       flex-direction: column;
       section.hero-img {
-        height: 40vh;
+        height: 40%;
         width: 100vw;
         border: solid .75rem #e9a054;
       }
@@ -98,7 +98,7 @@ html {
         width: 100vw;
         margin-top: 40vh;
         justify-content: flex-start;
-        height: 60vh;
+        height: 60%;
         padding: 3rem 4rem; 
         h1 {
           font-size: 3rem;
