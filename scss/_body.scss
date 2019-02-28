@@ -4,56 +4,66 @@ html {
   body {
   height: 100vh;
   font-family: "Open Sans", serif;
+  background-color: #e9a054;
   display: flex;
-    section.hero-img {
+    section.hero {
       padding: 0;
       width: 50vw;
-      display:flex;
-      justify-content: space-between;
-      flex-direction: row;
-      background-color: #f4dcc0;
-      background-image: url("../img/davidnunez.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      width: 50vw;
-      position: absolute;
-      background-position: 50% 10%;
-      border: solid 1rem #e9a054;
-    }
-    section.social-media {
-      padding: 3rem 4rem;
       display: flex;
-      z-index: 100;
-      height: 100px;
-      .linkdin, .instagram {
-        height:30px;
-        width:30px;
-        margin-right: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // display: flex;
+      // align-content: center;
+      // justify-content: center;
+      .badge {
         svg {
-          fill: #e9a054;
-          width: 100%;
-          height: 100%;
+          fill: #fff;
+          max-width: 200px;
+          height: 200px;
+          // margin-bottom: 2rem;
+        }
+      }
+      .linkdin, .instagram {
+         svg {
+          height:30px;
+          width:30px;
+          fill: rgba(255,255,255, .4);
+          margin: 4rem;
           &:hover {
-            fill: #9f5b14;
+            fill: #fff;
           }
         }
       }
     }
     section.bio {
+      background-color: #fff;
       flex-direction: column;
-      justify-content: flex-end;
       display: flex;
       width: 50vw;
-      position: fixed;
-      right: 0;
-      justify-content: center;
-      padding: 4rem 5rem;
-      height: 100%;
+      padding: 5rem;
       overflow: scroll;
+      text-align: center;
+      margin: auto;
+      height: 100vh;
+      align-items: center; 
       img {
-        display: none;
+        border-radius: 100%;
+        max-width: 250px;
+        background: #f4dcc0;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+      // svg {
+      //   height:30px;
+      //   width:30px;
+      //   fill: #f4dcc0;
+      //   &:hover {
+      //     fill: #fff;
+      //   }
+      // }
+      .body-text {
+        max-width: 600px;
       }
       h1 {
         font-family: "Playfair Display", serif;
@@ -62,8 +72,12 @@ html {
         color: #e9a054;
         margin-bottom: 2rem;
       }
+      .cross-out {
+        text-decoration: line-through;
+        text-decoration-color: #e9a054;
+        text-decoration-style: wavy;
+      }
       p {
-        max-width: 600px;
         color: #413414;
         line-height: 1.75rem;
         font-size: .875rem;
@@ -83,45 +97,48 @@ html {
         font-size: .75rem;
         margin-bottom: .25rem;
       }
-    }
-    @media only screen and (max-width: 1200px) {
-    }
-    @media only screen and (max-width: 768px) {
-      display: inline-flex;
-      flex-direction: column;
-      section.hero-img {
-        height: 40%;
-        width: 100vw;
-        border: solid .75rem #e9a054;
-      }
-      section.bio {
-        width: 100vw;
-        margin-top: 40vh;
-        justify-content: flex-start;
-        height: 60%;
-        padding: 3rem 4rem; 
-        h1 {
-          font-size: 3rem;
-        }
-        p {
-          max-width: none;
-        }
+      .linkdin, .instagram {
+        max-width: 600px;
       }
     }
-    @media only screen and (max-width: 578px) {
-      section.hero-img {
-        border: solid .5rem #e9a054;
-      }
-      section.social-media {
-        padding: 2rem;
-      }
-      section.bio {
-        padding: 2rem;
-        h1 {
-          font-size: 2.5rem;
-          margin-bottom: 1rem;
-        }
-      }
-    }
+    // @media only screen and (max-width: 1200px) {
+    // }
+    // @media only screen and (max-width: 768px) {
+    //   display: inline-flex;
+    //   flex-direction: column;
+    //   section.hero-img {
+    //     height: 40%;
+    //     width: 100vw;
+    //     border: solid .75rem #e9a054;
+    //   }
+    //   section.bio {
+    //     width: 100vw;
+    //     margin-top: 40vh;
+    //     justify-content: flex-start;
+    //     height: 60%;
+    //     padding: 3rem 4rem; 
+    //     h1 {
+    //       font-size: 3rem;
+    //     }
+    //     p {
+    //       max-width: none;
+    //     }
+    //   }
+    // }
+    // @media only screen and (max-width: 578px) {
+    //   section.hero-img {
+    //     border: solid .5rem #e9a054;
+    //   }
+    //   section.social-media {
+    //     padding: 2rem;
+    //   }
+    //   section.bio {
+    //     padding: 2rem;
+    //     h1 {
+    //       font-size: 2.5rem;
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
   }
 }
