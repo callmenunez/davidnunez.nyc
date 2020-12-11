@@ -13,7 +13,6 @@ html {
       justify-content: center;
       align-items: center;
       overflow: hidden;
-
     }
     .hero {
       &__shape {
@@ -43,7 +42,7 @@ html {
         .st1 {
           fill: none;
           stroke: #000000; 
-          stroke-width: 1px;
+          stroke-width: 2px;
           stroke-miterlimit:10;
         }
       }
@@ -54,8 +53,24 @@ html {
         background-color: #000000;
         grid-column: 5 / span 4;
         grid-row: 2 / span 4;
-        opacity: 10%;
         z-index: -2;
+      }
+      &__linkedIn {
+        grid-column: 8 / span 1;
+        grid-row: 1 / span 1;
+        align-self: end;
+      }
+      &__instagram {
+        grid-column: 2 / span 1;
+        grid-row: 8 / span 1;
+        justify-self: end;
+      }
+      &__socialMedia {
+        transition: 1s;
+        &:hover {
+          opacity: .5;
+          transition: 1s;
+        }
       }
     }
     section.bio {
@@ -83,7 +98,7 @@ html {
           line-height: 100%;
         }
         &__line {
-          border-top: solid 1px rgba(0,0,0,.5);
+          border-top: solid 2px rgba(0,0,0,.5);
           max-width: 10rem;
           text-align: center;
           margin: 3rem auto;
@@ -93,16 +108,17 @@ html {
           line-height: 250%;
           font-size: .875rem;
           margin-bottom: 2rem;
-          a, a:visited {
-            font-weight: 600;
-            color: rgba(0,0,0,.5);
-            &:hover {
-              text-decoration: none;
-              color: rgba(0,0,0,.75);
-            }
-          }
           &:last-of-type {
             margin-bottom: 2rem;
+          }
+          &--link {
+            font-weight: 600;
+            transition: 1s;
+            text-decoration: none;
+            &:hover {
+              opacity: .5; 
+              transition: 1s;
+            }
           }
         }
       }
@@ -112,7 +128,7 @@ html {
       and (max-width: 768px) 
       and (-webkit-min-device-pixel-ratio: 2) { 
       section.bio {
-        padding: 4rem;
+        padding: 2rem;
       }
     }
     @media only screen 
@@ -122,8 +138,8 @@ html {
       display: block;
       section.hero {
         width: 100vw;
-        height: calc(100vh - 100px);
-
+        height: auto;
+        padding: 2rem;
       }
       section.bio {
         width: 100vw;
