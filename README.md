@@ -1,2 +1,2 @@
-# davidnunez.nyc
-My personal website where I plan on having one simple html file with multiple style variations that load at random when you refresh the page. The concept came to me when I couldnt decide what I wanted my site to look like. I figure this way I can have many different designs all living in one place, and each version will explore different ways of laying out content using css grid and flexbox. 
+# davidthe.dev
+A simple personal website where different colors show up everytime you load the page. 
